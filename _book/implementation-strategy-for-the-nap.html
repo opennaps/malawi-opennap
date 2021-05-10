@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Implementation Strategy for the NAP | Malawi Open NAP</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Implementation Strategy for the NAP | Malawi Open NAP" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Implementation Strategy for the NAP | Malawi Open NAP" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Open NAP Initiative" />
+
+
+<meta name="date" content="2021-05-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="national-adaptation-priorities.html"/>
+<link rel="next" href="mobilization-of-other-sources-of-finance.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Malawi Open NAP</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
+<li class="chapter" data-level="2" data-path="executive-summary.html"><a href="executive-summary.html"><i class="fa fa-check"></i><b>2</b> Executive Summary</a></li>
+<li class="chapter" data-level="3" data-path="framework-for-the-nap.html"><a href="framework-for-the-nap.html"><i class="fa fa-check"></i><b>3</b> Framework for the NAP</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="framework-for-the-nap.html"><a href="framework-for-the-nap.html#essential-functions-of-the-nap-process"><i class="fa fa-check"></i><b>3.0.1</b> Essential functions of the NAP process</a></li>
+<li class="chapter" data-level="3.0.2" data-path="framework-for-the-nap.html"><a href="framework-for-the-nap.html#the-nap-as-the-umbrella-programme-for-adaptation"><i class="fa fa-check"></i><b>3.0.2</b> The NAP as the umbrella programme for adaptation</a></li>
+<li class="chapter" data-level="3.0.3" data-path="framework-for-the-nap.html"><a href="framework-for-the-nap.html#coherence-with-national-development-context-sdgs-sendai-and-other-relevant-frameworks"><i class="fa fa-check"></i><b>3.0.3</b> Coherence with national development context, SDGs, Sendai and other relevant frameworks</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="approach-and-methodologies.html"><a href="approach-and-methodologies.html"><i class="fa fa-check"></i><b>4</b> Approach and Methodologies</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="approach-and-methodologies.html"><a href="approach-and-methodologies.html#guiding-principles"><i class="fa fa-check"></i><b>4.1</b> Guiding principles</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="approach-and-methodologies.html"><a href="approach-and-methodologies.html#guidelines-used"><i class="fa fa-check"></i><b>4.1.1</b> Guidelines used</a></li>
+<li class="chapter" data-level="4.1.2" data-path="approach-and-methodologies.html"><a href="approach-and-methodologies.html#a-systems-approach-to-adaptation"><i class="fa fa-check"></i><b>4.1.2</b> A systems approach to adaptation</a></li>
+<li class="chapter" data-level="4.1.3" data-path="approach-and-methodologies.html"><a href="approach-and-methodologies.html#other-unique-considerations"><i class="fa fa-check"></i><b>4.1.3</b> Other unique considerations</a></li>
+<li class="chapter" data-level="4.1.4" data-path="approach-and-methodologies.html"><a href="approach-and-methodologies.html#road-map"><i class="fa fa-check"></i><b>4.1.4</b> Road Map</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="national-context.html"><a href="national-context.html"><i class="fa fa-check"></i><b>5</b> National Context</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="national-context.html"><a href="national-context.html#national-circumstances"><i class="fa fa-check"></i><b>5.1</b> National circumstances</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="national-context.html"><a href="national-context.html#legal-frameworks"><i class="fa fa-check"></i><b>5.1.1</b> Legal frameworks</a></li>
+<li class="chapter" data-level="5.1.2" data-path="national-context.html"><a href="national-context.html#institutional-arrangements-for-climate-change-adaptation"><i class="fa fa-check"></i><b>5.1.2</b> Institutional arrangements for climate change adaptation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="vision-goals-and-objectives-of-the-nap.html"><a href="vision-goals-and-objectives-of-the-nap.html"><i class="fa fa-check"></i><b>6</b> Vision, Goals and Objectives of the NAP</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="vision-goals-and-objectives-of-the-nap.html"><a href="vision-goals-and-objectives-of-the-nap.html#vision-for-adaptation-for-the-country"><i class="fa fa-check"></i><b>6.1</b> Vision for Adaptation for the Country</a></li>
+<li class="chapter" data-level="6.2" data-path="vision-goals-and-objectives-of-the-nap.html"><a href="vision-goals-and-objectives-of-the-nap.html#goals-and-objectives-of-the-nap"><i class="fa fa-check"></i><b>6.2</b> Goals and Objectives of the NAP</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="climate-change-adaptation-assessment.html"><a href="climate-change-adaptation-assessment.html"><i class="fa fa-check"></i><b>7</b> Climate Change Adaptation Assessment</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="climate-change-adaptation-assessment.html"><a href="climate-change-adaptation-assessment.html#observed-climate-impacts"><i class="fa fa-check"></i><b>7.1</b> Observed climate impacts</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="climate-change-adaptation-assessment.html"><a href="climate-change-adaptation-assessment.html#projected-future-climate"><i class="fa fa-check"></i><b>7.1.1</b> Projected future climate</a></li>
+<li class="chapter" data-level="7.1.2" data-path="climate-change-adaptation-assessment.html"><a href="climate-change-adaptation-assessment.html#assessment-by-key-systems"><i class="fa fa-check"></i><b>7.1.2</b> Assessment by key systems</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="national-adaptation-priorities.html"><a href="national-adaptation-priorities.html"><i class="fa fa-check"></i><b>8</b> National Adaptation Priorities</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="national-adaptation-priorities.html"><a href="national-adaptation-priorities.html#key-risks-and-adaptation-options"><i class="fa fa-check"></i><b>8.1</b> Key risks and adaptation options</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="national-adaptation-priorities.html"><a href="national-adaptation-priorities.html#ranking-adaptation-actions"><i class="fa fa-check"></i><b>8.1.1</b> Ranking adaptation actions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="implementation-strategy-for-the-nap.html"><a href="implementation-strategy-for-the-nap.html"><i class="fa fa-check"></i><b>9</b> Implementation Strategy for the NAP</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="implementation-strategy-for-the-nap.html"><a href="implementation-strategy-for-the-nap.html#projects-for-implementation-and-guidelines"><i class="fa fa-check"></i><b>9.1</b> Projects for implementation and guidelines</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="implementation-strategy-for-the-nap.html"><a href="implementation-strategy-for-the-nap.html#promoting-action-by-all-actors-and-stakeholders-policy-and-capacity-development-outreach"><i class="fa fa-check"></i><b>9.1.1</b> Promoting action by all actors and stakeholders: policy and capacity-development, outreach</a></li>
+<li class="chapter" data-level="9.1.2" data-path="implementation-strategy-for-the-nap.html"><a href="implementation-strategy-for-the-nap.html#addressing-vulnerabilities-and-risks-in-key-systems-and-sectors"><i class="fa fa-check"></i><b>9.1.2</b> Addressing vulnerabilities and risks in key systems and sectors</a></li>
+<li class="chapter" data-level="9.1.3" data-path="implementation-strategy-for-the-nap.html"><a href="implementation-strategy-for-the-nap.html#better-informed-decision-making-climate-information-services-early-warning-science-and-technology-decision-support-modeling-research"><i class="fa fa-check"></i><b>9.1.3</b> Better informed decision-making: climate information services, early warning, science and technology, decision-support modeling, research</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="mobilization-of-other-sources-of-finance.html"><a href="mobilization-of-other-sources-of-finance.html"><i class="fa fa-check"></i><b>10</b> Mobilization of other Sources of Finance</a></li>
+<li class="chapter" data-level="11" data-path="monitoring-and-evaluation-of-adaptation-actions-and-process.html"><a href="monitoring-and-evaluation-of-adaptation-actions-and-process.html"><i class="fa fa-check"></i><b>11</b> Monitoring and evaluation of adaptation actions and process</a></li>
+<li class="chapter" data-level="12" data-path="reporting.html"><a href="reporting.html"><i class="fa fa-check"></i><b>12</b> Reporting</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="reporting.html"><a href="reporting.html#adaptation-communicationsndcs"><i class="fa fa-check"></i><b>12.1</b> Adaptation communications/NDCs</a></li>
+<li class="chapter" data-level="12.2" data-path="reporting.html"><a href="reporting.html#links-to-sdg-voluntary-reporting-and-sendai-framework-monitor"><i class="fa fa-check"></i><b>12.2</b> Links to SDG voluntary reporting and Sendai Framework Monitor</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="reporting.html"><a href="reporting.html#gender"><i class="fa fa-check"></i><b>12.2.1</b> Gender</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="further-development-of-the-programme-to-support-future-naps.html"><a href="further-development-of-the-programme-to-support-future-naps.html"><i class="fa fa-check"></i><b>13</b> Further development of the programme to support future NAPs</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="further-development-of-the-programme-to-support-future-naps.html"><a href="further-development-of-the-programme-to-support-future-naps.html#data-and-system-observations-to-support-future-assessments"><i class="fa fa-check"></i><b>13.1</b> Data and system observations to support future assessments</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="annex-i-nap-outputs.html"><a href="annex-i-nap-outputs.html"><i class="fa fa-check"></i><b>14</b> Annex I: NAP Outputs</a></li>
+<li class="chapter" data-level="15" data-path="annex-2-country-profile.html"><a href="annex-2-country-profile.html"><i class="fa fa-check"></i><b>15</b> Annex 2: Country Profile</a></li>
+<li class="chapter" data-level="16" data-path="annex-3-data-and-information-system-to-support-the-nap.html"><a href="annex-3-data-and-information-system-to-support-the-nap.html"><i class="fa fa-check"></i><b>16</b> Annex 3: Data and information system to support the NAP</a></li>
+<li class="chapter" data-level="17" data-path="alignment-with-the-gcf-country-programme.html"><a href="alignment-with-the-gcf-country-programme.html"><i class="fa fa-check"></i><b>17</b> Alignment with the GCF Country Programme</a></li>
+<li class="chapter" data-level="18" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>18</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Malawi Open NAP</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="implementation-strategy-for-the-nap" class="section level1" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Implementation Strategy for the NAP</h1>
+<div id="projects-for-implementation-and-guidelines" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Projects for implementation and guidelines</h2>
+<p>Table XX: Existing country programmes for climate change adaptation</p>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="44%" />
+<col width="5%" />
+<col width="6%" />
+<col width="2%" />
+<col width="6%" />
+<col width="9%" />
+<col width="6%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Project / Programme</th>
+<th>Objectives</th>
+<th>Funders</th>
+<th>Implementing Agency</th>
+<th>Type of Project</th>
+<th>Duration</th>
+<th>Priority Sectors</th>
+<th>Geographic Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Building Climate Change Resilience in the Fisheries Sector in Malawi</td>
+<td>To improve Lake Malawi and coastal area community resilience to climate change through <br>the development of an early warning system, and sustainable fisheries and aquaculture, <br>in order to ensure food and livelihood security.</td>
+<td>Least Developed Countries Fund</td>
+<td>FAO</td>
+<td>Full Size</td>
+<td>09/11/2016 to 31/07/2021</td>
+<td>Climate Change Adaptation</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Shire Valley Transformation Program - I</td>
+<td>To provide access to reliable gravity fed irrigation and drainage services, secure <br>land tenure for smallholder farmers, and strengthen management of wetlands and <br>protected areas in the Shire Valley.</td>
+<td>GEF Trust Fund</td>
+<td>The World Bank</td>
+<td>Full-size Project</td>
+<td>Project Approved for Implementation 08- Aug 2017</td>
+<td>Climate Change, Biodiversity</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Technology Needs Assessments - Phase III (TNA Phase III)</td>
+<td>Provide participating countries targeted financial and technical support to prepare <br>new or updated and improved TNAs, including Technology Action Plans (TAPs), for <br>prioritized technologies that reduce greenhouse gas emissions, support adaptation to <br>climate change, and are consistent with Nationally Determined Contributions and national <br>sustainable development objectives</td>
+<td>GEF Trust Fund</td>
+<td>United Nations Environment Programme</td>
+<td>Full-size Project</td>
+<td>Project approved for implementation, 13/03/2018</td>
+<td>climate change</td>
+<td>Global</td>
+</tr>
+<tr class="even">
+<td>Food-IAP: Enhancing the Resilience of Agro-Ecological Systems (ERASP)</td>
+<td>Enhance the Provision of Ecosystem services and improve the Productivity and Resilience<br>of Agricultural Systems of Vulnerable Rural Poor.</td>
+<td>GEF Trust Fund</td>
+<td>International Fund for Agricultural Development</td>
+<td>Full-size Project</td>
+<td>Project Approved for Implementation 02/04/2017</td>
+<td>Climate Change, Biodiversity, Land degradation</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Global Partnership on Wildlife Conservation and Crime Prevention for <br>Sustainable Development (PROGRAM)</td>
+<td>Promote wildlife conservation, wildlife crime prevention and pro-conservation<br>sustainable development to reduce impacts to known threatened species from poaching and<br>illegal trade.</td>
+<td>GEF Trust Fund</td>
+<td>The World Bank</td>
+<td>Full-size Project</td>
+<td>Concept proposed, 01 Jun 2015</td>
+<td>Climate Change, Biodiversity, Land degradation</td>
+<td>Global</td>
+</tr>
+<tr class="even">
+<td>Food-IAP: Fostering Sustainability and Resilience for Food Security in <br>Sub-Saharan Africa - An Integrated Approach (IAP-PROGRAM)</td>
+<td>Support countries in target geographies for integrating priorities to safeguard and <br>maintain ecosystem services into investments improving smallholder agriculture and food<br>value chains(Target 10-12 countries; 10 million ha of production landscapes; 2-3 million<br>beneficiary households)</td>
+<td>GEF Trust Fund</td>
+<td>International Fund for Agricultural Development</td>
+<td>Full-size Project</td>
+<td>Concept approved, 01 Jun 2015</td>
+<td>Climate Change, Biodiversity, Land degradation</td>
+<td>Regional</td>
+</tr>
+<tr class="odd">
+<td>Climate Adaptation for Sustainable Water Supply</td>
+<td>Sustain availability of water supply in the river courses &amp; climate proof water<br>resources outputs of the Sustainable Rural Water &amp; Sanitation Infrastructure for<br>Improved Health &amp; Livelihood project in five districts: Rumphi, Nkhotakota, Ntcheu,<br>Mangochi and Phalombe</td>
+<td>Least Developed Countries Fund</td>
+<td>African Development Bank</td>
+<td>Full-size Project</td>
+<td>Project Approved for Implementation, 10 Jan 2019</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Umbrella Programme for Biennial Update Report to the United National<br>Framework Convention on Climate Change (UNFCCC)</td>
+<td>To support thirty nine (39) Least Developed Countries (LDCs) and Small Islands Developing<br>States (SIDS) prepare and submit good quality initial biennial update reports to the<br>UNFCCC that comply with the convention’s reporting obligation</td>
+<td>GEF Trust Fund</td>
+<td>United Nations Environment Programme</td>
+<td>Full-size Project</td>
+<td>Project Approved for Implementation, 23 Jun 2015</td>
+<td>Climate Change</td>
+<td>Global</td>
+</tr>
+<tr class="odd">
+<td>Building Climate Change Resilience in the Fisheries Sector in Malawi</td>
+<td>To improve the resilience of fishing communities around Lake Malombe to the effects of<br>climate change</td>
+<td>Least Developed Countries Fund</td>
+<td>Food and Agriculture Organization</td>
+<td>Full-size Project</td>
+<td>Project Approved for Implementation, 28 Aug 2016</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Strengthening Climate Information and Early Warning Systems in Malawi to<br>Support Climate Resilient Development and Adaptation to Climate Change</td>
+<td>To strengthen the weather, climate and hydrological monitoring capabilities, early<br>warning systems and available information for responding to extreme weather and planning<br>adaptation to climate change in Malawi.</td>
+<td>Least Developed Countries Fund</td>
+<td>United Nations Development Programme</td>
+<td>Full-size Project</td>
+<td>Project closed, 02 Jul 2019</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Shire Natural Ecosystems Management Project</td>
+<td>Shire River Basin planning framework developed to improve land and water management for<br>ecosystem and livelihood benefits in target areas</td>
+<td>GEF Trust Fund</td>
+<td>The World Bank</td>
+<td>Full-size Project</td>
+<td>Project closed, 31 May 2019</td>
+<td>Climate Change, Land degradation, Biodiversity</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Malawi Climate Transparency Framework</td>
+<td>To strengthen the capacity of institutions in Malawi and set up an information system to<br>fulfill the enhanced Transparency requirements of the Paris Agreement.</td>
+<td>GEF Trust Fund</td>
+<td>United Nations Environment Programme</td>
+<td>Medium-size Project</td>
+<td>Proposed start and completion dates 1/1/2021-12/31/2023</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Sustainable Forest Management Impact Program on Dryland Sustainable<br>Landscapes</td>
+<td>To avoid, reduce, and reverse further degradation, desertication, and deforestation of<br>land and ecosystems in drylands through the sustainable management of production <br>landscapes</td>
+<td>GEF Trust Fund</td>
+<td>Food and Agriculture Organization</td>
+<td>Full-size Project</td>
+<td>Concept Approved, 01 Jun 2019</td>
+<td>Climate Change, Biodiversity, Land Degradation</td>
+<td>Global</td>
+</tr>
+<tr class="even">
+<td>Malawi-climate resilient and sustainable capture fisheries, aquaculture<br>development and watershed management project</td>
+<td>Aimed at improving the resilience of Malawi’s inland fisheries and the associate land<br>management in the face of climate change, with a focus on local community engagement,<br>aims to complement and leverage an approved AfDB project focusing more on the enterprise<br>development aspects of the same challenge.</td>
+<td>Least Developed Countries Fund</td>
+<td>African Development Bank</td>
+<td>Full-size Project</td>
+<td>Concept Approved , 01 Dec 2019</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>GEF-7 Africa Minigrids Program</td>
+<td>The Africa Minigrid Program seeks to support selected African countries to increase<br>energy access by reducing the cost and increasing commercial viability of renewable<br>energy mini-grids.</td>
+<td>GEF Trust Fund</td>
+<td>United Nations Development Programme</td>
+<td>Full-size Project</td>
+<td>Concept Approved, 01 Dec 2019</td>
+<td>Climate Change</td>
+<td>Regional</td>
+</tr>
+<tr class="even">
+<td>Adapting to Climate Change Through Integrated Risk Management Strategies<br>and Enhanced Market Opportunities for Resilient Food Security and<br>Livelihoods</td>
+<td>The project seeks to enhance climate adaptation and food security of households through<br>access to integrated climate risk management strategies and structured market<br>opportunities, with a focus on the most vulnerable</td>
+<td>Adaptation Fund</td>
+<td>World Food Programme (WFP)</td>
+<td> </td>
+<td>Start date -06/11/2020</td>
+<td>Food security</td>
+<td>Malawi / Africa</td>
+</tr>
+<tr class="odd">
+<td>South-South Cooperation Grant (SSC)</td>
+<td>On 16 February 2016, the Government of Malawi received peer support for accreditation<br>of a National Implementing Entity to the Adaptation Fund from the National Environment<br>Management Authority (NEMA) of Kenya.</td>
+<td>Adaptation Fund</td>
+<td>National Environmental Management Authority (NEMA), Kenya</td>
+<td>Readiness Grants</td>
+<td>Approval Date-16/02/2016</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Enhancing Adaptive Capacity and Livelihood Diversification for the Rural<br>Poor of Northern Malawi</td>
+<td>The Project seeks to enhance resilience and adaptive capacity of rural communities that<br>are peripheral to Nkhata Bay, Mzimba, Karonga, Rumphi and Chitipa urban areas in the<br>northern Malawi.</td>
+<td>Adaptation Fund</td>
+<td>African Development Bank (AfDB)</td>
+<td>Regular sized project</td>
+<td>Proposal Submission date - 15 Feb 2019</td>
+<td>Rural development</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Building urban climate resilience in South-eastern Africa</td>
+<td>To develop capacities and establish conditions to adapt to the adverse effects of climate<br>change in vulnerable cities of Madagascar, Malawi, Mozambique and the Union of Comoros;</td>
+<td>Adaptation Fund</td>
+<td>United Nations Human Settlements Programme (UN-Habitat)</td>
+<td> </td>
+<td>Projected duration July 2018- January 2023</td>
+<td>Disaster risk reduction and early warning systems</td>
+<td>Madagascar, Malawi, Mozambique and Union of Comoros</td>
+</tr>
+<tr class="even">
+<td>National Climate Change Programme</td>
+<td>This project enables the Government of Malawi to climate-proof the policies, strategies<br>and plans of the sectors of the economy most directly affected by climate change.</td>
+<td>Green Climate Fund and patners</td>
+<td>Department of Environment Affairs, Malawi</td>
+<td> </td>
+<td>End date December 2020</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Saving Lives and Protecting Agriculture Based Livelihoods in Malawi:<br>Scaling Up the Use of Modernized Climate Information and Early Warning<br>Systems” (M-Climes)</td>
+<td>The project will support the Government of Malawi to take important steps to save lives<br>and enhance livelihoods at risk from climate-related disasters.</td>
+<td>Green Climate Fund</td>
+<td>Local and National Governments</td>
+<td>Medium-size Project</td>
+<td>Projected start date: 01/05/2017</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Improving Preparedness to Agro-Climatic Extremes in Malawi (IPACE-Malawi)</td>
+<td>To identify critical agro-climatic drought and flood indicators in three districts of<br>central and southern Malawi; test the skill of short term to seasonal forecast tools in<br>simulating these indicators; and co-design agricultural climate services based on these<br>indicators/forecast tools.</td>
+<td>Natural Environment Research Council, NERC</td>
+<td>University of Leeds, School of Earth and Environment</td>
+<td> </td>
+<td>Oct 18 - Apr 21</td>
+<td>Agri-environmental science, <br>Climate &amp; Climate Change, <br>Development studies</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Building Food Security and Social Resilience to HIV/AIDS in Malawi</td>
+<td>Working with farmers and stakeholders, researchers will document how climate change is<br>perceived or experienced by age, gender, HIV/AIDS status, food security status and<br>household structure. They will examine how government organizations are conceptualizing<br>and responding to climate change.</td>
+<td>International Development Research Centre</td>
+<td>Several Researchers from different institutions</td>
+<td> </td>
+<td>22-03-2013 to 22-03-2017</td>
+<td>Food, Environment, Health</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td> Climate Adaptation for Rural Livelihoods and Agriculture (CARLA) </td>
+<td>The overall goal to improve communities’ resilience to climate variability and climate<br>change by developing and implementing adaptation strategies and measures that will<br>improve agricultural production and rural livelihoods were largely achieved.</td>
+<td>Global Environment Facility (GEF)</td>
+<td>African Development Bank</td>
+<td> </td>
+<td>April 12, 2012-June 30, 2016</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td> Global Climate Change Alliance (GCCA) – Malawi, Planning for climate<br>change</td>
+<td>The project seeks to build capacity in climate change planning, with emphasis on<br>Malawi’s irrigation sector.</td>
+<td>European Union</td>
+<td>Human Dynamics</td>
+<td> </td>
+<td>Jun 2015-Dec 2017</td>
+<td>Environment</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Adaptation planning support for Malawi through UNEP</td>
+<td>to reduce vulnerability of people in Malawi and to promote community and ecosystem<br>resilience to the impacts of climate change and gender-equitable adaptive capacity for<br>planning and implementing adaptation interventions.</td>
+<td>Green Climate Fund</td>
+<td>United Nations Environment Programme</td>
+<td>Concept note</td>
+<td>Proposal received by the GCF Secretareat, 26 Feb 2019</td>
+<td>Climate Change</td>
+<td>Malawi</td>
+</tr>
+<tr class="odd">
+<td>Building climate resilience of food insecure smallholder farmers in<br>Southern Malawi</td>
+<td>The project addresses the adaptation needs of vulnerable smallholder farmers and their<br>communities in the Southern Region of Malawi, who have limited resilience and adaptive<br>capacities towards climate-related shocks.</td>
+<td>Green Climate Fund</td>
+<td>Sahara and Sahel Observatory</td>
+<td>Concept note</td>
+<td>Date of Submission 11/18/2019</td>
+<td>Climate Change, Food Security</td>
+<td>Malawi</td>
+</tr>
+<tr class="even">
+<td>Climate Investor One</td>
+<td>Providing financing to develop renewable energy projects in regions with power deficits<br>to reduce energy costs and CO2 emissions.</td>
+<td>Green Climate Fund</td>
+<td>Environmental Affairs Department</td>
+<td>Large size project</td>
+<td>20 Oct 2018- 21 June 2039</td>
+<td> </td>
+<td>Malawi and 17 other countries</td>
+</tr>
+</tbody>
+</table>
+<div id="promoting-action-by-all-actors-and-stakeholders-policy-and-capacity-development-outreach" class="section level3" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Promoting action by all actors and stakeholders: policy and capacity-development, outreach</h3>
+<p>The National Adaptation Programme and Action (NAPA) (2016) outlines key stakeholders and actors described below:</p>
+<ul>
+<li><p><strong>The Environmental Affairs Department (EAD)</strong> is the designated government agency responsible for managing Malawi’s environmental policies and programs. The EAD is accountable for coordinating NAPA projects, with line ministries carrying out specific projects. The EAD is also the lead organization in climate change planning for the Government of Malawi.</p></li>
+<li><p><strong>Cabinet Committee on Health and Environment</strong> is the highest level executive decision-making entity for environmental affairs in Malawi. The National Council
+for the Environment is a government watchdog that ensures coordination with various stakeholders, promotes compliance with environmental regulation, and
+monitors development projects to incorporate environmental concerns.</p></li>
+<li><p><strong>Department of Climate Change and Meteorological Services</strong> is tasked with providing climate and weather information and services. Its role in adaptation includes producing climate change scenarios and improving forecasting and early warning systems.</p></li>
+<li><p><strong>Department of Poverty and Disaster Management Affairs</strong> is the government watchdog for coordinating disaster and management activities. The department
+improves preparedness and response to changing disaster risks. The department also collaborates with relevant stakeholders in promoting the use of climate-proof
+structures, particularly in flood-prone areas</p></li>
+<li><p><strong>Ministry of Agriculture and Food Security</strong> promotes agricultural and rural development in Malawi. The ministry helps to educate and promote climate change
+adaptation practices as well as ensuring food security.</p></li>
+<li><p><strong>Ministry of Irrigation and Water Development</strong> ensures the provision and equitable access to water throughout Malawi. It enhances climate change adaptation
+through the provision of water supply as climate-induced threats increase.</p></li>
+<li><p><strong>Ministry of Environment and Climate Change Management</strong> plays a regulatory role by ensuring climate change projects and programmes are implemented following
+the international climate change protocols and conventions, national policies, regulations and guidelines. It also provides the infrastructure to ensure the
+information on climate change mechanisms has the widest reach.</p></li>
+<li><p><strong>Environmental Affairs Department of the Ministry of Natural Resources and Environment</strong> serves as the focal point for the United Nations Framework Convention on Climate Change (UNFCCC). It coordinates climate change adaptation planning for the government of Malawi.</p></li>
+<li><p><strong>Malawi Red Cross Society</strong> is a non-governmental organization that helps to reduce human suffering during disasters. The organization strives to reduce the
+vulnerability of those at risk and increase preparedness for more frequent disasters.</p></li>
+<li><p><strong>National Smallholder Farmers’ Association of Malawi</strong> empowers and represent farmers interests. It promotes adaptation practices and supports access to risks
+pooling schemes.</p></li>
+<li><p><strong>Academia and research institutions</strong> who generate new local knowledge and develop appropriate adaptation solutions</p></li>
+<li><p><strong>Private sector stakeholders</strong> who provide and implement specific commercial adaptation solutions through public-private partnerships</p></li>
+<li><p><strong>Media</strong> to propagate climate change adaptation messages.</p></li>
+</ul>
+</div>
+<div id="addressing-vulnerabilities-and-risks-in-key-systems-and-sectors" class="section level3" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Addressing vulnerabilities and risks in key systems and sectors</h3>
+<p>The vulnerabilities and risks in key systems and sectors have been presented in sections 6 and 7 of this report. The approach to addressing these were discussed
+during the 2016 workshop and are outlined in table XX below. Some examples of potential projects and costs are listed in Table XXX below; these should be to the
+extent possible aligned with the GCF country programme and other relevant climate finance mechanisms (international and domestic) and implementing partners as
+well as take into account technology and capacity building.</p>
+<p>Table XX: Addressing vulnerability and risks in key sectors/systems (Map Stocktaking Report 2016)</p>
+<table>
+<colgroup>
+<col width="14%" />
+<col width="85%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>ELEMENT A. LAY THE GROUNDWORK AND ADDRESS GAPS<br><br>1. Initiating and launching the NAP process<br><br><br>2. Stocktaking: Initiated in 2016 for identifying available<br>information on climate change impacts, vulnerability and adaptation,<br>and assessing gaps and needs of the enabling environment for the NAP process.<br><br>3. Addressing gaps and weaknesses in undertaking the NAP process<br><br>4. Comprehensively and iteratively assessing development needs and climate<br>vulnerabilities</th>
+<th>- The NAP process was launched officially on September 2, 2014, where workshops were<br>conducted across the country for capacity building and raising awareness.<br><br>- Malawi is also an active participant in the Open NAP initiative being supported by the LDC Expert Group (LEG)<br><br><br>- The stocktaking recommended the following thematic areas be considered for the medium and long-term adaptation<br>planning horizon of the NAP process: 1. Improving access to energy sources, 2. Increasing resilience of food<br>production systems, 3. Improving weather and climate forecasting, 4. Improving agriculture to ensure farmers<br>are moving from subsistence to commercialization, 5. Promoting catchment management practices, 6. Integrated<br>water resource management to encourage large scale commercial irrigation, 7. Population change and human<br>settlements, 8. Civic education and adult literacy, 9. Infrastructure development, 10. Inclusiveness of gender,<br>disability and other socially excluded vulnerable groups in implementing climate change adaptation interventions,<br>11. Monitoring of climate: adequate database and easy access for all people, 12. Development of collaborative<br>wildlife management, 13. Education, science and green technology<br><br><br>- While the stocktaking did not find conspicuous gaps in the landscape of climate change knowledge relevant to<br>Malawi, it was clear that the most accurate and often-referenced modelling data is now somewhat obsolete. Thus<br>newer research will better warn the NAP process is going forward.<br><br>- Similarly, while there is an adequate amount of literature for each of the sectors to have an initial<br>understanding of future threats from climate change, there is a need for more Malawi-specific studies, along<br>with more sector-specific studies.<br><br><br>- The main weaknesses the stocktaking found in Malawi’s climate change adaptation architecture were low levels<br>of awareness about climate change at all levels of society, a limited number of experts in the various sectors<br>of climate change adaptation; absence of climate change centres of learning and research; lack of locally driven<br>sustainable climate change funding; and weak institutional capacity for managing climate change.<br><br>- Climate vulnerabilities will be assessed at the sector, sub-national and national levels and involves analyzing<br>the current climate to identify vulnerability, risks, and trends in variables and indices at the national,<br>regional or ecosystem level that could be used to support planning and decision making. Comprehensively analyze<br>community resilience and the staff to be trained on methodologies for climate risk assessment and adaptation<br>planning, including the integration of climate change in budgeting processes</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div id="better-informed-decision-making-climate-information-services-early-warning-science-and-technology-decision-support-modeling-research" class="section level3" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> Better informed decision-making: climate information services, early warning, science and technology, decision-support modeling, research</h3>
+<p>Essential cross-cutting projects/programmes would include:</p>
+<ul>
+<li><p>Improving community resilience through the development of sustainable rural livelihoods.</p></li>
+<li><p>Restoring forests in the Upper, Middle, and Lower Shire valleys.</p></li>
+<li><p>Improving agricultural production under erratic rains and changing climatic conditions.</p></li>
+<li><p>Improving Malawi’s preparedness to cope with droughts and floods.</p></li>
+<li><p>Improving climate monitoring to enhance Malawi’s early warning capability and decision-making.</p></li>
+<li><p>Improving sustainable utilization of Lake Malawi and its lakeshore.</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="national-adaptation-priorities.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mobilization-of-other-sources-of-finance.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["malawi-opennap.pdf", "malawi-opennap.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
